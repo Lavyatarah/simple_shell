@@ -1,11 +1,13 @@
-#include  <stdio.h>
 #include "shell.h"
+
 /**
-*  built-in that prints the current environment
-*structure that cointains pontential arguments
-*constant prototype
-*returns:exist with given exits status
-* (0) if argv [0] != "exitint _myexit(info_t *info)
+ * _myexit - exits the shell
+ * @info: Structure containing potential arguments. Used to maintain
+ *          constant function prototype.
+ *  Return: exits with a given exit status
+ *         (0) if info.argv[0] != "exit"
+ */
+int _myexit(info_t *info)
 {
 	int exitcheck;
 
@@ -92,6 +94,4 @@ int _myhelp(info_t *info)
 	if (0)
 		_puts(*arg_array); /* temp att_unused workaround */
 	return (0);
-}"
-/*
-
+}
